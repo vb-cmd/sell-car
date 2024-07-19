@@ -1,0 +1,1 @@
+json.partial! partial: 'car', locals: { car: @car }

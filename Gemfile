@@ -59,6 +59,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'faker', '~> 3.4'
+  gem "rspec-rails", "~> 6.1"
 end
 
 group :test do
@@ -74,3 +75,4 @@ gem 'sass-rails', '~> 6.0'
 gem 'jwt', '~> 2.8'
 
 gem 'rack-cors', '~> 2.0'
+gem "dotenv", "~> 3.1", groups: [:development, :test]

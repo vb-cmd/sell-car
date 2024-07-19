@@ -10,4 +10,4 @@ json.extract! car,
               :year,
               :engine_volume,
               :status
-json.image_url car.image.url
+json.image_url url_for(car.image)

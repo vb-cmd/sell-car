@@ -1,0 +1,5 @@
+vitalii:
+  email: vitalii@example.com
+  name: Vitalii
+  password_digest: <%= BCrypt::Password.create('password') %>
+  phone_number: "+1234567890"

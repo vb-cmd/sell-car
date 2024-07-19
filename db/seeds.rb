@@ -24,6 +24,7 @@ if Rails.env.development?
                 year: Date.new(Faker::Vehicle.year),
                 engine_volume: Faker::Vehicle.version,
                 status: Faker::Number.between(from: 0, to: 2),
+                image: File.open(File.join(Rails.root, 'spec/fixtures/files/black.jpg')),
                 user: User.all.sample)
   end
 end

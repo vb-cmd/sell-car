@@ -1,0 +1,1 @@
+car_image_blob: <%= ActiveStorage::FixtureSet.blob filename: 'black.jpg', service_name: 'test' %>

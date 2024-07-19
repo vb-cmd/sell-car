@@ -3,8 +3,8 @@ module Api::V1
     before_action :authorized
     skip_before_action :verify_authenticity_token
 
-    def encode_token(token)
-      JWT.encode(token, 'hello_world')
+    def encode_token(user)
+      JWT.encode({ user_id: user.id }, ENV['JWT_KEY'])
     end
 
     def decoded_token
@@ -13,7 +13,7 @@ module Api::V1
 
       token = header.split(' ')[1]
       begin
-        JWT.decode(token, 'hello_world')
+        JWT.decode(token, ENV['JWT_KEY'])
       rescue JWT::DecodeError
         nil
       end

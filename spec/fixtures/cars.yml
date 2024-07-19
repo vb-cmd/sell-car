@@ -1,0 +1,12 @@
+ford:
+  make: ford
+  model: 'deluxe'
+  body_type: 'sedan'
+  mileage: 1000
+  color: 'red'
+  price: 100000.0
+  fuel_type: 'petrol'
+  year: '2020-01-01'
+  engine_volume: '4.0'
+  status: 'pending'
+  user: vitalii

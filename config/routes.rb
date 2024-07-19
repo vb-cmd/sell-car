@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'cars#index'
 
   scope defaults: { format: false } do
-    resources :cars, only: [:index]
+    resources :cars, only: %i[index show]
   end
 
   namespace :admin do

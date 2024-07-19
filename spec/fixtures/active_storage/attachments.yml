@@ -1,0 +1,4 @@
+car_image:
+  name: image
+  record: ford (Car)
+  blob: car_image_blob
