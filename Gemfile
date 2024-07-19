@@ -68,7 +68,6 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'bootstrap', '~> 5.3'
 
 gem 'sass-rails', '~> 6.0'
 
@@ -76,3 +75,5 @@ gem 'jwt', '~> 2.8'
 
 gem 'rack-cors', '~> 2.0'
 gem "dotenv", "~> 3.1", groups: [:development, :test]
+
+gem "kaminari", "~> 1.2"

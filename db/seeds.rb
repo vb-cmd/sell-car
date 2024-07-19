@@ -5,8 +5,8 @@ if Rails.env.development?
   # Create users
   puts 'Creating users...'
   10.times do |i|
-    User.create!(name: "User ##{i}",
-                 phone_number: "+1234567890#{i}",
+    User.create!(name: Faker::Name.name,
+                 phone_number: Faker::PhoneNumber.phone_number,
                  email: "user#{i}@example.com",
                  password: 'password')
   end

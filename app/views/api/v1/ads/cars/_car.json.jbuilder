@@ -8,7 +8,6 @@ json.extract! car,
               :fuel_type,
               :year,
               :engine_volume
-json.url car_path(car)
 json.image_url url_for(car.image)
 
 json.user do
