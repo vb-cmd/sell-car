@@ -1,0 +1,2 @@
+module Users::CarsHelper
+end

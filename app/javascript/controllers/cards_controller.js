@@ -5,7 +5,11 @@ export default class extends Controller {
   static targets = ["cars"]
 
   async connect() {
-    await FetchCars.getData(1)
+    await this.fetchCars(1)
+  }
+
+  async fetchCars(page) {
+    await FetchCars.getData(page)
       .then((data) => {
         this.carsTarget.innerHTML = this.render(data)
       }).catch((error) => {
@@ -13,14 +17,8 @@ export default class extends Controller {
       })
   }
 
-  manipulatePages(event) {
-    console.info('clicked')
-    FetchCars.getData(event.params.page)
-      .then((data) => {
-        this.carsTarget.innerHTML = this.render(data)
-      }).catch((error) => {
-        console.error(error)
-      })
+  async manipulatePages(event) {
+    await this.fetchCars(event.params.page)
   }
 
   render(data) {

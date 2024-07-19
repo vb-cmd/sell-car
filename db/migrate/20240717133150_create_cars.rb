@@ -8,7 +8,7 @@ class CreateCars < ActiveRecord::Migration[7.1]
       t.string :color
       t.decimal :price
       t.string :fuel_type
-      t.date :year
+      t.integer :year
       t.string :engine_volume
       t.integer :status, default: 0
       t.belongs_to :user

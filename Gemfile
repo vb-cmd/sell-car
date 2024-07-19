@@ -77,3 +77,5 @@ gem 'rack-cors', '~> 2.0'
 gem "dotenv", "~> 3.1", groups: [:development, :test]
 
 gem "kaminari", "~> 1.2"
+
+gem "ransack", "~> 4.2"

@@ -1,0 +1,2 @@
+module Ads::CarsHelper
+end

@@ -21,7 +21,7 @@ if Rails.env.development?
                 color: Faker::Color.color_name,
                 price: Faker::Number.between(from: 999, to: 100_000_000),
                 fuel_type: Faker::Vehicle.fuel_type,
-                year: Date.new(Faker::Vehicle.year),
+                year: Faker::Vehicle.year,
                 engine_volume: Faker::Vehicle.version,
                 status: Faker::Number.between(from: 0, to: 2),
                 image: File.open(File.join(Rails.root, 'spec/fixtures/files/black.jpg')),

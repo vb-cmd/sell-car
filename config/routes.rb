@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  root 'cars#index'
+  root 'ads/cars#index'
 
-  scope defaults: { format: false } do
+  scope module: :ads, as: 'ads', defaults: { format: false } do
+    resources :cars, only: %i[index]
+  end
+
+  namespace :users, defaults: { format: false } do
     resources :cars, except: %i[show create destroy update]
-    resource :users, except: %i[create destroy update]
+    resource :profile, except: %i[create new destroy update]
   end
 
   namespace :admin do

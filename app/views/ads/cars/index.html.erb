@@ -1,0 +1,47 @@
+<div class="row text-center">
+  <div class="col-8" data-controller="cards">
+    <div data-cards-target="cars"></div>
+  </div>
+  <div class="col p-2">
+    <form>
+      <div class="mb-3">
+        <label for="car_make" class="form-label">Make</label>
+        <input type="text" class="form-control" id="car_make" name="car[make]">
+      </div>
+      <div class="mb-3">
+        <label for="car_model" class="form-label">Model</label>
+        <input type="text" class="form-control" id="car_model" name="car[model]">
+      </div>
+      <div class="mb-3">
+        <label for="car_body_type" class="form-label">Body Type</label>
+        <input type="text" class="form-control" id="car_body_type" name="car[body_type]">
+      </div>
+      <div class="mb-3">
+        <label for="car_mileage" class="form-label">Mileage</label>
+        <input type="number" class="form-control" id="car_mileage" name="car[mileage]">
+      </div>
+      <div class="mb-3">
+        <label for="car_color" class="form-label">Color</label>
+        <input type="text" class="form-control" id="car_color" name="car[color]">
+      </div>
+      <div class="mb-3">
+        <label for="car_price" class="form-label">Price</label>
+        <input type="number" min="1" class="form-control" id="car_price" name="car[price]">
+      </div>
+      <div class="mb-3">
+        <label for="car_fuel_type" class="form-label">Fuel type</label>
+        <input type="text" class="form-control" id="car_fuel_type" name="car[fuel_type]">
+      </div>
+      <div class="mb-3">
+        <label for="car_year" class="form-label">Year</label>
+        <input type="number" min="1900" max="2100" class="form-control" id="car_year" name="car[year]">
+      </div>
+      <div class="mb-3">
+        <label for="car_engine_volume" class="form-label">Engine volume</label>
+        <input type="text" class="form-control" id="car_engine_volume" name="car[engine_volume]">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+</div>

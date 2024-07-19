@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_18_072826) do
     t.string "color"
     t.decimal "price"
     t.string "fuel_type"
-    t.date "year"
+    t.integer "year"
     t.string "engine_volume"
     t.integer "status", default: 0
     t.bigint "user_id"
