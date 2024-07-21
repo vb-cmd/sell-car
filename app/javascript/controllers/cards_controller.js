@@ -8,8 +8,8 @@ export default class extends Controller {
     await this.fetchCars(1)
   }
 
-  async fetchCars(page) {
-    await FetchCars.getData(page)
+  async fetchCars(page, params = {}) {
+    await FetchCars.getData(page, params)
       .then((data) => {
         this.carsTarget.innerHTML = this.render(data)
       }).catch((error) => {
@@ -19,6 +19,29 @@ export default class extends Controller {
 
   async manipulatePages(event) {
     await this.fetchCars(event.params.page)
+  }
+
+  async search(event) {
+    event.preventDefault();
+console.info(event)
+    let params = {
+      make_cont_any: event.target["car[make_cont_any]"].value,
+      model_cont_any: event.target["car[model_cont_any]"].value,
+      body_type_cont_any: event.target["car[body_type_cont_any]"].value,
+      mileage_gt: event.target["car[mileage_gt]"].value,
+      mileage_lt: event.target["car[mileage_lt]"].value,
+      color_cont_any: event.target["car[color_cont_any]"].value,
+      price_gt: event.target["car[price_gt]"].value,
+      price_lt: event.target["car[price_lt]"].value,
+      fuel_type_cont_any: event.target["car[fuel_type_cont_any]"].value,
+      year_gt: event.target["car[year_gt]"].value,
+      year_lt: event.target["car[year_lt]"].value,
+      engine_volume_cont_any: event.target["car[engine_volume_cont_any]"].value
+    }
+
+    Object.keys(params).forEach(key => params[key] == "" && delete params[key])
+
+    await this.fetchCars(1, params)
   }
 
   render(data) {
