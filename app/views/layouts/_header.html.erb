@@ -8,79 +8,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
         </ul>
 
-        <div data-controller="user--sign-in-up">
-          <div class="btn-group" role="group">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button>
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</button>
-          </div>
-
-          <%# Modal Sign Up %>
-          <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="signUpModalLabel">Sign Up</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="email" name="user[email]">
-                    </div>
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password" name="user[password]">
-                    </div>
-                    <div class="mb-3">
-                      <label for="password_confirmation" class="form-label">Password Confirmation</label>
-                      <input type="password" class="form-control" id="password_confirmation" name="user[password_confirmation]">
-                    </div>
-                    <div class="mb-3">
-                      <label for="phone_number" class="form-label">Phone Number</label>
-                      <input type="phone" class="form-control" id="phone_number" name="user[phone_number]">
-                    </div>
-                    <div class="mb-3">
-                      <label for="user[name]" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" name="user[name]">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <%# Modal Sign In %>
-          <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="signInModalLabel">Sign in</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div data-controller="user--sign-in-up"></div>
 
       </div>
     </div>

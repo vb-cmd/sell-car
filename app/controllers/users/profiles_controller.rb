@@ -1,5 +1,7 @@
-class Users::ProfilesController < ApplicationController
-  before_action :authorized, only: %i[show]
-  
-  def show; end
+module Users
+  class ProfilesController < BaseController
+    def show; end
+
+    def edit; end
+  end
 end

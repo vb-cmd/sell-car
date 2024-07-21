@@ -1,6 +1,6 @@
 module Api::V1::Users
   class SessionsController < Api::V1::BaseController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized_render_json, only: [:create]
 
     def create
       @user = User.find_by(email: user_params[:email])

@@ -10,4 +10,5 @@ json.extract! car,
               :year,
               :engine_volume,
               :status
+json.edit_url edit_users_car_path(car)
 json.image_url url_for(car.image)

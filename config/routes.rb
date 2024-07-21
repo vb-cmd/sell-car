@@ -20,7 +20,7 @@ Rails.application.routes.draw do
         resources :cars, only: [:index]
       end
       namespace :users do
-        resource :profile, only: %i[show]
+        resource :profile, only: %i[show update]
         resource :session, only: %i[create]
         resource :registration, only: %i[create]
         resources :cars, except: %i[new edit]

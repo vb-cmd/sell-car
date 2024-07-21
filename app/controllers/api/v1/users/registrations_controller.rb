@@ -1,6 +1,6 @@
 module Api::V1::Users
   class RegistrationsController < Api::V1::BaseController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized_render_json, only: [:create]
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
     def create

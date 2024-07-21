@@ -6,7 +6,7 @@ module Api::V1::Users
     before_action :find_car, only: %i[show update destroy]
 
     def index
-      @cars = current_user.cars
+      @cars = params[:status].present? ? current_user.cars.where(status: params[:status]) : current_user.cars
     end
 
     def show; end

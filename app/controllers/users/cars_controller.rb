@@ -1,9 +1,9 @@
-class Users::CarsController < ApplicationController
-  before_action :authorized
+module Users
+  class CarsController < BaseController
+    def index; end
 
-  def index; end
+    def new; end
 
-  def new; end
-
-  def edit; end
+    def edit; end
+  end
 end

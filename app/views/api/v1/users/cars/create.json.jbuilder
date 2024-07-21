@@ -1,1 +1,1 @@
-json.partial! partial: 'car', locals: { car: @car }
+json.message 'Car created successfully'

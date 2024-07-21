@@ -23,7 +23,7 @@ export default class extends Controller {
 
   async search(event) {
     event.preventDefault();
-console.info(event)
+
     let params = {
       make_cont_any: event.target["car[make_cont_any]"].value,
       model_cont_any: event.target["car[model_cont_any]"].value,
