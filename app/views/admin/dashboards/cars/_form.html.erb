@@ -1,0 +1,51 @@
+<%= form_with model: car, url: url, method: method do |form| %>
+  <div class="mb-3">
+    <%= form.label :make, "Make:", class: "form-label" %>
+    <%= form.text_field :make, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :model, "Model:", class: "form-label" %>
+    <%= form.text_field :model, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :body_type, "Body Type:", class: "form-label" %>
+    <%= form.text_field :body_type, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :mileage, "Mileage:", class: "form-label" %>
+    <%= form.number_field :mileage, class: "form-control", min: 0 %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :color, "Color:", class: "form-label" %>
+    <%= form.text_field :color, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :price, "Price:", class: "form-label" %>
+    <%= form.number_field :price, class: "form-control", min: 0 %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :fuel_type, "Fuel Type:", class: "form-label" %>
+    <%= form.text_field :fuel_type, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :year, "Year:", class: "form-label" %>
+    <%= form.number_field :year, class: "form-control", min: 1900, max: 2100 %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :engine_volume, "Engine Volume:", class: "form-label" %>
+    <%= form.text_field :engine_volume, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :status, "Status:", class: "form-label" %>
+    <%= form.select :status, ["pending", "rejected", " approved"], {}, class: "form-select" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :user_id, "User:", class: "form-label" %>
+    <%= form.select :user_id, User.select(:name, :id).map { |user| [user.name, user.id] }, {}, class: "form-select" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :image, "Image:", class: "form-label" %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
+  <%= form.submit "Send", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col">
+    <%= paginate @cars %>
+
+    <% @cars.each do |car| %>
+      <%= render partial: "car", locals: { car: car } %>
+    <% end %>
+
+    <%= paginate @cars %>
+
+  </div>
+  <div class="col">
+    <ul class="list-group">
+      <li class="list-group-item"><%= link_to "All cars", admin_dashboards_cars_path %></li>
+      <li class="list-group-item"><%= link_to "Approved", admin_dashboards_cars_path(status: "approved") %></li>
+      <li class="list-group-item"><%= link_to "Rejected", admin_dashboards_cars_path(status: "rejected") %></li>
+      <li class="list-group-item"><%= link_to "Pending", admin_dashboards_cars_path(status: "pending") %></li>
+      <li class="list-group-item"><%= link_to "New car", new_admin_dashboards_car_path %></li>
+    </ul>
+  </div>
+</div>

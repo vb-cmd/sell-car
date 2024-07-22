@@ -1,0 +1,11 @@
+<%= form_with url: admin_users_session_path, method: :post do |form| %>
+  <div class="mb-3">
+    <%= form.label "admin_user[email]", "Email address:", class: "form-label" %>
+    <%= form.email_field "admin_user[email]", class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label "admin_user[password]", "Password:", class: "form-label" %>
+    <%= form.password_field "admin_user[password]", class: "form-control" %>
+  </div>
+  <%= form.submit "submit", class: "btn btn-primary" %>
+<% end %>

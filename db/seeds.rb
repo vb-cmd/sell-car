@@ -2,6 +2,14 @@ if Rails.env.development?
   # Delete all records
   [User, Car].each(&:delete_all)
 
+  # Create admins
+  puts 'Creating admins...'
+
+  AdminUser.create!(
+    email: 'admin@admin.com',
+    password: 'password'
+  )
+
   # Create users
   puts 'Creating users...'
   10.times do |i|

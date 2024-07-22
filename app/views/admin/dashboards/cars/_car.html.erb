@@ -1,0 +1,23 @@
+<div class="card m-1">
+  <%= image_tag(car.image, class: "card-img-top") %>
+  <div class="card-body">
+    <h5 class="card-title"><%= "#{car.make} #{car.model}" %></h5>
+    <p class="card-text">
+      Status:
+      <span class="badge text-bg-secondary"><%= car.status %></span></p>
+
+    <div class="row">
+      <div class="col">
+        <%= link_to "Detailed", admin_dashboards_car_path(car), class: "btn btn-primary" %>
+      </div>
+      <div class="col">
+        <%= link_to "Edit", edit_admin_dashboards_car_path(car), class: "btn btn-warning" %>
+      </div>
+      <div class="col">
+        <%= form_with url: admin_dashboards_car_path(car), method: :delete do |f| %>
+          <%= f.submit "Delete", class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

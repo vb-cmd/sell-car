@@ -11,7 +11,13 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    get '/', to: 'base#index'
+    get '/', to: 'dashboards/home#index', as: 'home'
+    namespace :dashboards do
+      resources :cars
+    end
+    namespace :users do
+      resource :session, only: %i[create show destroy]
+    end
   end
 
   namespace :api do

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "admin_application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="row">
+        <div class="col" style="font-size: 30px;">
+            Admin Dashboard
+          </div>
+          <div class="col">
+            <% if logged_in? %>
+              <div class="row">
+                <div class="col">
+                  <p>Hello,
+                    <%= current_admin_user.email %></p>
+                </div>
+                <div class="col">
+                  <%= form_with url: admin_users_session_path, method: :delete do |f| %>
+                    <%= f.submit "Logout", class: "btn btn-danger" %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </header>
+
+      <div class="text-danger"><%= alert %></div>
+      <div class="text-success"><%= notice %></div>
+
+      <%= yield %>
+
+      <footer>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <%= Time.now.strftime("%Y.%m.%d %H:%M:%S") %>
+            </div>
+            <div class="col">
+              Admin Dashboard
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>
