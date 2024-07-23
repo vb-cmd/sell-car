@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "rdbg",
             "name": "Debug Rails",
@@ -11,6 +12,14 @@
             "command": "bin/rails",
             "script": "s",
             "args": []
+        },
+        {
+            "type": "rdbg",
+            "name": "Debug Rspec",
+            "request": "launch",
+            "command": "rspec",
+            "script": "${file}",
+            "askParameters": true
         }
     ]
 }

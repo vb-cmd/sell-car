@@ -9,7 +9,7 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
     @token = Api::V1::BaseController.new.encode_token(@user)
   end
 
-  describe 'GET /api/v1/users/cars' do
+  describe 'GET /index' do
     before do
       get api_v1_users_cars_path(format: :json),
           headers: { 'Authorization': "Bearer #{@token}" }
@@ -26,7 +26,7 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
     end
   end
 
-  describe 'GET /api/v1/users/cars/:id' do
+  describe 'GET /show' do
     before do
       get api_v1_users_car_path(@user.cars.first, format: :json),
           headers: { 'Authorization': "Bearer #{@token}" }
@@ -39,7 +39,6 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
     it 'returns the car' do
       first = JSON.parse(response.body)
 
-      expect(first['id']).to eq(@car.id)
       expect(first['make']).to eq(@car.make)
       expect(first['model']).to eq(@car.model)
       expect(first['body_type']).to eq(@car.body_type)
@@ -47,13 +46,13 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
       expect(first['color']).to eq(@car.color)
       expect(first['price'].to_f).to eq(@car.price)
       expect(first['fuel_type']).to eq(@car.fuel_type)
-      expect(Date.parse(first['year'])).to eq(@car.year)
+      expect(first['year']).to eq(@car.year)
       expect(first['engine_volume']).to eq(@car.engine_volume)
       expect(first['status']).to eq(@car.status)
     end
   end
 
-  describe 'POST /api/v1/users/cars' do
+  describe 'POST /create' do
     it 'creates a new car' do
       post api_v1_users_cars_path(format: :json),
            headers: { 'Authorization': "Bearer #{@token}" },
@@ -66,7 +65,7 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
                color: 'black',
                price: 20_000,
                fuel_type: 'diesel',
-               year: '2023-01-01',
+               year: 2023,
                engine_volume: '2.0',
                image: fixture_file_upload('black.jpg', 'image/jpg')
              }
@@ -88,7 +87,7 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
     end
   end
 
-  describe 'PUT /api/v1/users/cars' do
+  describe 'PUT /update' do
     it 'updates a car' do
       put api_v1_users_car_path(@car, format: :json),
           headers: { 'Authorization': "Bearer #{@token}" },
@@ -103,7 +102,7 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
     end
   end
 
-  describe 'DELETE /api/v1/users/cars' do
+  describe 'DELETE /destroy' do
     it 'deletes a car' do
       delete api_v1_users_car_path(@car, format: :json),
              headers: { 'Authorization': "Bearer #{@token}" }

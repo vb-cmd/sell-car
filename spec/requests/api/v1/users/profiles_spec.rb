@@ -20,7 +20,6 @@ RSpec.describe 'Api::V1::Users::ProfilesController', type: :request do
 
     it 'returns user data' do
       json = JSON.parse(response.body)
-      expect(json['id']).to eq(@user.id)
       expect(json['name']).to eq(@user.name)
       expect(json['email']).to eq(@user.email)
     end

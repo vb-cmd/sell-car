@@ -3,7 +3,7 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -62,4 +62,18 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+end
+
+def admin_user_login(email, password)
+  post admin_users_session_path, params: { admin_user: { email:, password: } }
+
+  expect(response).to have_http_status(:redirect)
+
+  follow_redirect!
+end
+
+def user_login(user)
+  @token = Api::V1::BaseController.new.encode_token(user)
+
+  cookies[:jwt] = @token
 end
