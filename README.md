@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Run the project
+```bash
+rails db:create
+rails db:migrate
+rails db:seed
+rails s
+```
 
-Things you may want to cover:
+### Login admin and user
+```yaml
+Admin: 
+  email: 'admin@admin.com',
+  password: 'password'
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```yaml
+User:
+  email: "user0@example.com",
+  password: 'password'
+```
