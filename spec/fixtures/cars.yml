@@ -6,7 +6,189 @@ ford:
   color: 'red'
   price: 100000.0
   fuel_type: 'petrol'
-  year: '2020-01-01'
+  year: 2010
   engine_volume: '4.0'
   status: 'pending'
+  user: vitalii
+
+fiat:
+  make: fiat
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 1000
+  color: 'blue'
+  price: 200000.0
+  fuel_type: 'petrol'
+  year: 2023
+  engine_volume: '4.0'
+  status: 'rejected'
+  user: vitalii
+
+bmw:
+  make: bmw
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 2000
+  color: 'black'
+  price: 300000.0
+  fuel_type: 'petrol'
+  year: 2020
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+ford1:
+  make: ford
+  model: 'deluxe'
+  body_type: 'sedan'
+  mileage: 1000
+  color: 'red'
+  price: 100000.0
+  fuel_type: 'petrol'
+  year: 2010
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+fiat1:
+  make: fiat
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 1000
+  color: 'blue'
+  price: 200000.0
+  fuel_type: 'petrol'
+  year: 2023
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+bmw1:
+  make: bmw
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 2000
+  color: 'black'
+  price: 300000.0
+  fuel_type: 'petrol'
+  year: 2020
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+ford2:
+  make: ford2
+  model: 'deluxe'
+  body_type: 'sedan'
+  mileage: 1000
+  color: 'red'
+  price: 100000.0
+  fuel_type: 'petrol'
+  year: 2010
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+fiat2:
+  make: fiat2
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 1000
+  color: 'blue'
+  price: 200000.0
+  fuel_type: 'petrol'
+  year: 2023
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+bmw2:
+  make: bmw2
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 2000
+  color: 'black'
+  price: 300000.0
+  fuel_type: 'petrol'
+  year: 2020
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+ford3:
+  make: ford3
+  model: 'deluxe'
+  body_type: 'sedan'
+  mileage: 1000
+  color: 'red'
+  price: 100000.0
+  fuel_type: 'petrol'
+  year: 2010
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+fiat3:
+  make: fiat3
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 1000
+  color: 'blue'
+  price: 200000.0
+  fuel_type: 'petrol'
+  year: 2023
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+bmw3:
+  make: bmw3
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 2000
+  color: 'black'
+  price: 300000.0
+  fuel_type: 'petrol'
+  year: 2020
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+ford4:
+  make: ford4
+  model: 'deluxe'
+  body_type: 'sedan'
+  mileage: 1000
+  color: 'red'
+  price: 100000.0
+  fuel_type: 'petrol'
+  year: 2010
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+fiat4:
+  make: fiat4
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 1000
+  color: 'blue'
+  price: 200000.0
+  fuel_type: 'petrol'
+  year: 2023
+  engine_volume: '4.0'
+  status: 'approved'
+  user: vitalii
+
+bmw4:
+  make: bmw4
+  model: 'deluxe'
+  body_type: 'luxury'
+  mileage: 2000
+  color: 'black'
+  price: 300000.0
+  fuel_type: 'petrol'
+  year: 2020
+  engine_volume: '4.0'
+  status: 'approved'
   user: vitalii

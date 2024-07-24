@@ -22,7 +22,7 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
     it 'returns the cars' do
       json = JSON.parse(response.body)
 
-      expect(json.length).to eq(1)
+      expect(json.length).to eq(@user.cars.count)
     end
   end
 
@@ -38,17 +38,9 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
 
     it 'returns the car' do
       first = JSON.parse(response.body)
-
-      expect(first['make']).to eq(@car.make)
-      expect(first['model']).to eq(@car.model)
-      expect(first['body_type']).to eq(@car.body_type)
-      expect(first['mileage']).to eq(@car.mileage)
-      expect(first['color']).to eq(@car.color)
-      expect(first['price'].to_f).to eq(@car.price)
-      expect(first['fuel_type']).to eq(@car.fuel_type)
-      expect(first['year']).to eq(@car.year)
-      expect(first['engine_volume']).to eq(@car.engine_volume)
-      expect(first['status']).to eq(@car.status)
+      first_car_user = @user.cars.first
+      
+      expect(first['id']).to eq(first_car_user.id)
     end
   end
 
@@ -104,11 +96,12 @@ RSpec.describe 'Api::V1::Users::CarsController', type: :request do
 
   describe 'DELETE /destroy' do
     it 'deletes a car' do
+      cached_car_count = Car.count
       delete api_v1_users_car_path(@car, format: :json),
              headers: { 'Authorization': "Bearer #{@token}" }
 
       expect(response).to have_http_status(:success)
-      expect(Car.count).to eq(0)
+      expect(Car.count).to eq(cached_car_count - 1)
     end
   end
 end

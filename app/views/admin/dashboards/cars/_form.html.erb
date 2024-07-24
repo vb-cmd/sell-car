@@ -37,7 +37,7 @@
   </div>
   <div class="mb-3">
     <%= form.label :status, "Status:", class: "form-label" %>
-    <%= form.select :status, ["pending", "rejected", " approved"], {}, class: "form-select" %>
+    <%= form.select :status, %w[pending rejected approved], {}, class: "form-select" %>
   </div>
   <div class="mb-3">
     <%= form.label :user_id, "User:", class: "form-label" %>

@@ -1,5 +1,7 @@
 <div class="card m-1">
-  <%= image_tag(car.image, class: "card-img-top") %>
+  <% if car.image.present? %>
+    <%= image_tag(car.image, class: "card-img-top") %>
+  <% end %>
   <div class="card-body">
     <h5 class="card-title"><%= "#{car.make} #{car.model}" %></h5>
     <p class="card-text">

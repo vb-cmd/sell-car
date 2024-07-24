@@ -1,8 +1,9 @@
-<div class="row text-center" data-controller="cards">
+<div class="row" data-controller="cards">
   <div class="col-8">
     <div data-cards-target="cars"></div>
   </div>
   <div class="col p-2">
+    <h3>Search:</h3>
     <form data-action="cards#search">
       <div class="mb-3">
         <label for="car_make" class="form-label">Make</label>
@@ -63,7 +64,7 @@
         <input type="text" class="form-control" id="car_engine_volume" name="car[engine_volume_cont_any]">
       </div>
 
-      <button type="submit" class="btn btn-primary">Search</button>
+      <button type="submit" class="btn btn-primary">Send</button>
     </form>
   </div>
 </div>

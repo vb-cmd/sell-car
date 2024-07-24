@@ -34,6 +34,7 @@ RSpec.describe 'Admin::Dashboards::CarsController', type: :request do
 
   describe 'POST /create' do
     it 'returns a new car' do
+      cached_car_count = Car.count
       post admin_dashboards_cars_path, params: {
         car: {
           make: 'text make',
@@ -57,7 +58,7 @@ RSpec.describe 'Admin::Dashboards::CarsController', type: :request do
 
       last_car = Car.last
 
-      expect(Car.count).to eq(2)
+      expect(Car.count).to eq(cached_car_count + 1)
       expect(last_car.user.id).to eq(@user.id)
       expect(last_car.status).to eq('rejected')
 

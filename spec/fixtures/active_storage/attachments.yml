@@ -2,3 +2,59 @@ car_image:
   name: image
   record: ford (Car)
   blob: car_image_blob
+car_image:
+  name: image
+  record: fiat (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: bmw (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: ford1 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: fiat1 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: bmw1 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: ford2 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: fiat2 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: bmw2 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: ford3 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: fiat3 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: bmw3 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: ford4 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: fiat4 (Car)
+  blob: car_image_blob
+car_image:
+  name: image
+  record: bmw4 (Car)
+  blob: car_image_blob

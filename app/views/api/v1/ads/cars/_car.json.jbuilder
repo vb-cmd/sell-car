@@ -8,7 +8,7 @@ json.extract! car,
               :fuel_type,
               :year,
               :engine_volume
-json.image_url url_for(car.image)
+json.image_url car.image.present? ? url_for(car.image) : ''
 
 json.user do
   json.extract! car.user, :name, :phone_number

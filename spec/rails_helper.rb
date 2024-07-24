@@ -77,3 +77,14 @@ def user_login(user)
 
   cookies[:jwt] = @token
 end
+
+def admin_user_login_system(email, password)
+  visit admin_users_session_path
+
+  within('#session') do
+    fill_in 'admin_user[email]', with: email
+    fill_in 'admin_user[password]', with: password
+  end
+
+  click_button 'Log in'
+end
